@@ -11,24 +11,6 @@ to run ::
 
     5- works on http://localhost:8080
 
-
-routes ::
-    1- users ::
-        POST > addUser >> name, email, phone, age
-        sample inputs
-        {
-            name: Mohamed Taher,
-            email: moslem.dev.2016@gmail.com
-            phone: 01020393975
-            age: 28
-        }
-        
-        PUT /:userId > updateUser >> name, email, phone, age
-        DELETE /:userId > deleteUser >> id: userId >> return deleted user data
-        GET /:userId >> id: userId >> return user data
-        GET / >> with 2 query >> page? | limit? >> return [user]
-
-
 attached also ::
     1- crudSimple.postman_collection.json :: a postman file to test all api's 
     2- backend / frontend source code for review and evaluate
@@ -45,5 +27,22 @@ focused points as possible ::
     8- clear coding
     9- catch errors
     10- organize logic & structure
+
+
+routes ::
+    1- users ::
+        POST > addUser >> name, email, phone, age
+        sample inputs
+        {
+            name: Mohamed Taher,
+            email: moslem.dev.2016@gmail.com
+            phone: 01020393975
+            age: 28
+        }
+        
+        PUT /:userId > updateUser >> name, email, phone, age
+        DELETE /:userId > deleteUser >> id: userId >> return deleted user data
+        GET /:userId >> id: userId >> return user data
+        GET / >> with 2 query >> page? | limit? >> return [user]
 
 console.log("thank you so much :) ");
