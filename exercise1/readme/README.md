@@ -11,22 +11,11 @@ to run ::
 
     5- works on http://localhost:8080
 
+
 attached also ::
     1- crudSimple.postman_collection.json :: a postman file to test all api's 
     2- backend / frontend source code for review and evaluate
     3- Screenshots.zip compressed file contains some screenshots for running app.
-
-focused points as possible ::
-    1-scratching
-    2-IOC > Inversion Of Control
-    3-SOLID principles [as possible]
-    4-generic components
-    5-custom hooks
-    6-high reusability
-    7-single truth sourcing.
-    8- clear coding
-    9- catch errors
-    10- organize logic & structure
 
 
 routes ::
@@ -45,4 +34,18 @@ routes ::
         GET /:userId >> id: userId >> return user data
         GET / >> with 2 query >> page? | limit? >> return [user]
 
+
+focused points as possible ::
+    1-scratching
+    2-IOC > Inversion Of Control
+    3-SOLID principles [as possible]
+    4-generic components
+    5-custom hooks
+    6-high reusability
+    7-single truth sourcing.
+    8- clear coding
+    9- catch errors
+    10- organize logic & structure
+
+    
 console.log("thank you so much :) ");
