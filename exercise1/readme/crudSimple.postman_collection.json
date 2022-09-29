@@ -1,0 +1,137 @@
+{
+	"variables": [],
+	"info": {
+		"name": "crudSimple",
+		"_postman_id": "fa052950-c3f5-f03f-9501-a73087466bdb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"url": "http://localhost:8080/api/users/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"fuuugd\",\n\t\"age\": 33,\n\t\"phone\": \"+201020390975\",\n\t\"email\": \"sdfdh@asdhas.asda\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"url": "http://localhost:8080/api/users/6334a3b9d23aaa8d0eb2b357",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"age\": 88\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"url": "http://localhost:8080/api/users/6334a3b9d23aaa8d0eb2b357",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"fuuugd\",\n\t\"age\": 33,\n\t\"phone\": \"+201020390975\",\n\t\"email\": \"sdfdh@asdhas.asda\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/users?page=2&limit=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"fuuugd\",\n\t\"age\": 33,\n\t\"phone\": \"+201020390975\",\n\t\"email\": \"sdfdh@asdhas.asda\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"url": "http://localhost:8080/api/users/6334a3b9d23aaa8d0eb2b357",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"fuuugd\",\n\t\"age\": 33,\n\t\"phone\": \"+201020390975\",\n\t\"email\": \"sdfdh@asdhas.asda\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

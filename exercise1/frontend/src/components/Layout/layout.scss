@@ -1,0 +1,37 @@
+@import '../../app.scss';
+
+#root, html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+.my-layout {
+  background-color: $darkGray;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.my-body {
+  padding: 50px 20px 20px 20px;
+  background-color: $blue;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  width: 70%;
+}
+
+.my-body-wrapper {
+  height: calc(100% - 85px);
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .my-body {
+    width: 100%;
+  } 
+}

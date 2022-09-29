@@ -1,0 +1,29 @@
+$blue: #282c34;
+$black: #292929;
+$white: #faf0e6b5;
+$over-white: #f8f1e9;
+$lightBlue: #61dafb;
+$darkGray: #383838;
+$gray: #c3c3c3;
+$red: #bc0404;
+$green: #008e21;
+
+@mixin header {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+@mixin icon-btn {
+    cursor: pointer;
+    margin: 0px 5px;
+    padding: 8px;
+    border-radius: 5px;
+    color: $over-white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 1000px) {
+        margin: 8px 0px;
+    }
+}
