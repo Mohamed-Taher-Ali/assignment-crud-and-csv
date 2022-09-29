@@ -5,7 +5,7 @@
 to run ::
     1- clone
 
-    2- cd backend folder
+    2- cd exercise1/backend folder
     3- sudo docker-compose up -d --build
     4- sudo docker-compose up
 
@@ -13,8 +13,8 @@ to run ::
 
 
 routes ::
-    1- users/
-        POST addUser >> name, email, phone, age
+    1- users ::
+        POST > addUser >> name, email, phone, age
         sample inputs
         {
             name: Mohamed Taher,
