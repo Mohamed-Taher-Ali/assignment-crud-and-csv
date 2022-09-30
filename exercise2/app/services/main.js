@@ -1,7 +1,7 @@
 const { checkCSVFileNameCorrectAndExist } = require('./checkCSVFileNameCorrectAndExist');
+const { BusinessCalcsContext } = require('./businessCalcs/BusinessCalcsContext');
+const { TaskStrategy } = require('./businessCalcs/TaskStrategy');
 const { readFileLineByLine } = require('./readFileLineByLine');
-const { BusinessCalcsContext } = require('./businessCalcs/Context');
-const { TaskStrategy } = require('./businessCalcs/taskStrategy');
 const { inputsDirPath } = require('./paths');
 const path = require('path');
 
