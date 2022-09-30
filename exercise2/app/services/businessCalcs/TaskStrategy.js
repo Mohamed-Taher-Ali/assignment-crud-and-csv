@@ -1,35 +1,37 @@
 class TaskStrategy {
-  ordersCount = 0;
-  #mostPopularObj = {};
   #productsTotalQuantityObj = {};
+  #mostPopularObj = {};
+  ordersCount = 0;
 
   constructor() { }
-  
-  
+
+
   readRow = (strRow) => {
     const rowDataArr = this.#extractDataFromRow(strRow);
     if (rowDataArr.length !== 5) return;
 
-    const [
+    let [
       orderId, area, productName, productQuantity, brand
     ] = rowDataArr;
+
+    productQuantity = +productQuantity;
 
     const productBrand = this.#joinProductBrand(productName, brand);
     this.#assignProductBrandToMostPopularObj(productBrand);
 
     this.#assignDataToProductTotalQuantityObj(productName, productQuantity);
 
-    this.#ordersCount += 1;
+    this.ordersCount += 1;
   }
 
 
   calcAverage = () => {
-    const productQuantityAverage = {};
-    for (const [product, totalQuantity] of this.#productsTotalQuantityObj) {
-      productQuantityAverage[product] = totalQuantity / this.ordersCount;
+    const productQuantityAverageArr = [];
+    for (const [product, totalQuantity] of Object.entries(this.#productsTotalQuantityObj)) {
+      productQuantityAverageArr.push([product, totalQuantity / this.ordersCount]);
     }
 
-    return productQuantityAverage;
+    return productQuantityAverageArr;
   }
 
 
@@ -37,7 +39,7 @@ class TaskStrategy {
     const mapProductBrandsCount = {};
     const ret = [];
 
-    for (const [productBrand, ordersCount] of this.#mostPopularObj) {
+    for (const [productBrand, ordersCount] of Object.entries(this.#mostPopularObj)) {
       const [product, brand] = this.#splitProductBrand(productBrand);
 
       if (!mapProductBrandsCount[product]) {
@@ -50,23 +52,23 @@ class TaskStrategy {
       }
     }
 
-    for (const [product, brandsOrdersCountObj] of mapProductBrandsCount) {
+    for (const [product, brandsOrdersCountObj] of Object.entries(mapProductBrandsCount)) {
       let mostPopularBrandName = Object.keys(brandsOrdersCountObj)[0];
       let mostPopularBrandCount = brandsOrdersCountObj[mostPopularBrandName];
 
-      for (const [brand, ordersCount] of brandsOrdersCountObj) {
-        if(mostPopularBrandCount >= ordersCount) return;
+      for (const [brand, ordersCount] of Object.entries(brandsOrdersCountObj)) {
+        if (mostPopularBrandCount >= ordersCount) continue;
 
         mostPopularBrandName = brand;
         mostPopularBrandCount = ordersCount;
       }
 
-      const retObj = {product, brand: mostPopularBrandName};
-      ret.push(retObj);
+      ret.push([product, mostPopularBrandName]);
     }
-
+    
     return ret;
   }
+
 
   getOrdersCount = () => {
     return this.ordersCount;
@@ -102,7 +104,7 @@ class TaskStrategy {
 
 
   #extractDataFromRow = (strRow) => {
-    return strRow.toLowerCase().split(',');
+    return strRow.split(',');
   }
 }
 
