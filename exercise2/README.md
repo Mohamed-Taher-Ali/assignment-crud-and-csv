@@ -25,14 +25,14 @@ to run ::
 focused points as possible ::
     1- design pattern (strategy design pattern to implement the strategy of getting avg and most popular).
     2- scratching
-    3- performance (used hashes and avoided many loops)
-    4-SOLID principles [as possible]
+    3- high performance (used hashes and avoided many loops)
+    4- SOLID principles [as possible]
     5- clear coding [as possible]
     6- catch errors
     7- organize logic & structure
-    8-high reusability
+    8- high reusability
     9- split concerns
-    10- some functional programming principles 
+    10- some functional programming principles
 
     
 console.log("thank you so much :) ");
