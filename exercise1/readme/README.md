@@ -3,13 +3,13 @@
 
 
 to run ::
-    1- clone
+    1- after clone
 
-    2- cd exercise1/backend folder
+    2- cd exercise1/backend directory
     3- sudo docker-compose up -d --build
     4- sudo docker-compose up
 
-    5- works on http://localhost:8080
+    5- open browser like google-chrome on http://localhost:8080
 
 
 attached also ::
@@ -17,6 +17,19 @@ attached also ::
     2- backend / frontend source code for review and evaluate
     3- Screenshots.zip compressed file contains some screenshots for running app.
 
+
+focused points as possible ::
+    1-scratching
+    2-IOC > Inversion Of Control
+    3-SOLID principles [as possible]
+    4-generic components
+    5-custom hooks
+    6-high reusability
+    7-single truth sourcing.
+    8- clear coding
+    9- catch errors
+    10- organize logic & structure
+    
 
 routes ::
     1- users ::
@@ -33,19 +46,6 @@ routes ::
         DELETE /:userId > deleteUser >> id: userId >> return deleted user data
         GET /:userId >> id: userId >> return user data
         GET / >> with 2 query >> page? | limit? >> return [user]
-
-
-focused points as possible ::
-    1-scratching
-    2-IOC > Inversion Of Control
-    3-SOLID principles [as possible]
-    4-generic components
-    5-custom hooks
-    6-high reusability
-    7-single truth sourcing.
-    8- clear coding
-    9- catch errors
-    10- organize logic & structure
 
     
 console.log("thank you so much :) ");
